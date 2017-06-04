@@ -1,0 +1,40 @@
+<!--Error Dialog-->
+<div aria-labelledby="myModalLabel" class="modal fade" id="error_modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-width" role="document">
+        <div class="modal-content card card-stats">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="error_title" style="color: red">ERROR</h4>
+            </div>
+            <div class="modal-body">
+                <h4 id="error_message"></h4>
+                <p id="suberror_message"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-simple" data-dismiss="modal" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Success Dialog-->
+<div aria-labelledby="myModalLabel" class="modal fade" id="success_modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-width" role="document">
+        <div class="modal-content card card-stats">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="success_title" style="color: green">SUCCESS</h4>
+            </div>
+            <div class="modal-body">
+                <h4 id="success_message">The requested changes or modification has been successfully committed to the
+                    database...</h4>
+                <p id="subsuccess_message"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-simple" data-dismiss="modal" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

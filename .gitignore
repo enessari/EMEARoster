@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+.idea
+db.sqlite3
+manifest.yml
+run_dev.sh
+Scheduler/migrations
+Core/migrations

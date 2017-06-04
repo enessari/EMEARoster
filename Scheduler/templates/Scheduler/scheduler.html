@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include "Core/header.html" %}
+
+    <!--DatePicker-->
+    {% load static %}
+    <link href='{% static "Scheduler/css/bootstrap-datepicker.css" %}' rel="stylesheet"/>
+
+    <!--Custom CSS-->
+    <link href='{% static "Scheduler/css/scheduler.css" %}' rel="stylesheet"/>
+
+</head>
+<body style="overflow:hidden">
+    <div class="wrapper" id="mainbody">
+
+        <!--FAB Button    -->
+        <div id="floating-action-button" class="fab action_button_disabled">
+            <div id="edit_button" class="option edit" data-toggle="modal" data-target="#EditCellModal"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+            <div class="option deselect" onclick="td_selected_class()"><i class="fa fa-window-close-o" aria-hidden="true"></i></div>
+            <div class="close"><i class="material-icons cross">close</i></div>
+        </div>
+
+        <!--Navigation Bar-->
+        {% include "Core/navigation-bar.html" %}
+
+        <!--Change Dates Modal-->
+        {% include "Scheduler/change-date-modal.html" %}
+
+        <!--Shuffle Modal-->
+        {% include "Scheduler/shuffle-modal.html" %}
+
+        <!--Feedback Modal-->
+        {% include "Core/feedback-modal.html" %}
+
+        <!--Edit Cell Modal-->
+        {% include "Scheduler/edit-cell-modal.html" %}
+
+        <!--Table layout-->
+        <div class="row">
+            <div id="roster-div" class="col-lg-12 col-md-12 col-sm-12">
+                <div id="roster-table">
+                    <table class="table cell-border">
+                        <thead>
+                        <tr>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!--Include all Java Script templates-->
+{% include "Core/js.html" %}
+
+<!--Scheduler specific JS-->
+{% load static %}
+<script src='{% static "Scheduler/js/generic.js" %}'></script>
+<script src='{% static "Scheduler/js/tableedit.js" %}'></script>
+<script src='{% static "Scheduler/js/tableloading.js" %}'></script>
+<script src='{% static "Scheduler/js/bootstrap-datepicker.js" %}'></script>
+
+<script>
+
+    // Get the rows for the roster
+    load_table('GET', "")
+
+    // Trigger datepicker (calender modal) when clicked
+    $('.datepicker').datepicker({
+        format: 'yyyy/mm/dd',
+        autoclose: true
+    });
+
+    // Adjust the scroll size on resize
+    $(window).resize(function() {
+        $('div.DTFC_ScrollWrapper').css('height', $(window).height() + "px");
+        $('div.dataTables_scrollBody').css('height',$(window).height() - 160.5 - 1 + "px").css('max-height', $(window).height());
+    });
+
+</script>
+</html>

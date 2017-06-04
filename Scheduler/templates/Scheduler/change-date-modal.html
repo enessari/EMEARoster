@@ -1,0 +1,49 @@
+<!--Change dates modal template-->
+<div aria-labelledby="myModalLabel" class="modal fade" id="ChangeDateModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Date Picker</h4>
+            </div>
+
+            <div class="modal-body table-responsive" style="width:100%">
+                <table class="change-date-table">
+                    <tr>
+                        <td class="change-date-text">
+                            From
+                        </td>
+                        <td>
+                            <input type="text"
+                                   class="datepicker input-margin-control change-date-input-box"
+                                   id="FromDatePicker" name="FromDatePicker"
+                                   />
+                        </td>
+                        <td class="change-date-text">
+                            To
+                        </td>
+                        <td>
+                            <input type="text"
+                                   class="datepicker input-margin-control change-date-input-box"
+                                   id="ToDatePicker" name="ToDatePicker"
+                                   />
+                        </td>
+                        <td style="text-align: center">
+                            <button id="search_dates" class="btn btn-primary btn-round" onclick="data_picked('change_dates')">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                                Reload
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-default btn-simple" data-dismiss="modal" type="button">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

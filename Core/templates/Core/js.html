@@ -1,0 +1,26 @@
+<!--JQuery js-->
+{% load static %}
+<script src='{% static "Core/js/jquery-1.10.2.js" %}' type="text/javascript"></script>
+
+<!--Core JS-->
+<script src='{% static "Core/js/bootstrap.js" %}' type="text/javascript"></script>
+
+<!--DataTables JS-->
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.min.js"
+        type="text/javascript"></script>
+
+
+<!--Common Scripts for every page-->
+<script type="text/javascript">
+
+    // Get the base url
+    function getBaseUrl() {
+        var re = new RegExp(/^.*\//);
+        return re.exec(window.location.href);
+    }
+
+</script>
+</html>
+
