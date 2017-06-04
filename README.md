@@ -56,3 +56,9 @@ python manage.py runserver --insecure
 ```
 /bin/sh run_dev.sh
 ```
+
++ Now open up a browser and using the below URL to access the app
+
+```
+http://127.0.0.1:8000/
+```
