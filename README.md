@@ -25,7 +25,7 @@ This repo is a fork and shortend version from [original roster](https://github.c
 git clone https://github.com/faisaltheparttimecoder/EMEARoster.git
 ```
 
-+ Install all the requirements
++ Install all the requirements ( best if you can created a VirtualEnv )
 
 ```
 pip install -r requirements.txt
@@ -36,13 +36,13 @@ pip install -r requirements.txt
 ```
 #!/usr/bin/env bash
 set +H
-export DB_ENGINE='django.db.backends.mysql'                              # If you are using mysql to store the information else read different engines here https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-export DB_NAME='DB_NAME'                                                 # Database name                     
-export DB_USER='DB_USER'                                                 # Database user
-export DB_PASS='DB_PASS'                                                 # Database user password
-export DB_HOST='DB_HOST'                                                 # Database Host
-export DB_PORT='DB_PORT'                                                 # Database Port
-export ADMIN_PASS='ADMIN_PASS'                                           # Provide the password that need to be used by the app to create the superuser in the database ( i.e for django admin page ) , if admin already created the app skips the step
+export DB_ENGINE="django.db.backends.mysql"                              # If you are using mysql to store the information else read different engines here https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+export DB_NAME="DB_NAME"                                                 # Database name                     
+export DB_USER="DB_USER"                                                 # Database user
+export DB_PASS="DB_PASS"                                                 # Database user password
+export DB_HOST="DB_HOST"                                                 # Database Host
+export DB_PORT="DB_PORT"                                                 # Database Port
+export ADMIN_PASS="ADMIN_PASS"                                           # Provide the password that need to be used by the app to create the superuser in the database ( i.e for django admin page ) , if admin already created the app skips the step
 export SECRET_KEY="SECRET_KEY"                                           # SECRET KEY of the Django app, i.e that key obtain when you run "Python Manage.py startproject" on Django
 export SOCIAL_AUTH_GOOGLE_OAUTH2_KEY="OUTH_KEY"                          # Google Authentication key to authenticate the user using google authentication ( https://console.developers.google.com )
 export SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET="OUTH_SECRET"                    # Google Authentication Secret
@@ -61,4 +61,10 @@ python manage.py runserver --insecure
 
 ```
 http://127.0.0.1:8000/
+```
+
++ To add user you can connect to the admin panel with username as "admin" and password that was given for the parameter ADMIN_PASS
+
+```
+http://127.0.0.1:8000/admin
 ```

@@ -9,9 +9,9 @@ logger = logging.getLogger('roster-extender')
 class Maintenance:
     def __init__(self):
         self.table_list = [
-            'core_rosteruser',
-            'core_rosteraudit',
-            'backgroundtask_lastrun',
+            'Core_rosteruser',
+            'Core_rosteraudit',
+            'BackgroundTask_lastrun',
         ]
 
         # Keep the space, do not remove

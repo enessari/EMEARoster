@@ -102,6 +102,9 @@ function load_table(method, data) {
                 fixedColumns: true,
             });
 
+            // Highlight the column with today's date
+            $("td[data-date='" + response.today_date + "']").addClass('todays-heading-border');
+
             // Apply audits
             data = {
                 "from_date": response.from_date,

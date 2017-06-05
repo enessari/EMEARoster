@@ -252,3 +252,19 @@ input[aria-controls="roster"] {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
 }
+
+.todays-heading-border {
+    border-left: 7px solid #283e4a !important;
+    border-right: 7px solid #283e4a !important;
+    border-top: none !important;
+    position: relative;
+}
+.todays-heading-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(40, 62, 74, .4) !important;
+}

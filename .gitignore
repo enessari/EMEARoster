@@ -106,3 +106,5 @@ manifest.yml
 run_dev.sh
 Scheduler/migrations
 Core/migrations
+
+.DS_Store

@@ -1,0 +1,8 @@
+.idea
+db.sqlite3
+run_dev.sh
+Scheduler/migrations
+Core/migrations
+README.md
+Core/static/img/edit_availability.png
+Core/static/img/main_screen.png
