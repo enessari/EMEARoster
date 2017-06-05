@@ -1,7 +1,7 @@
 import logging
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.contrib.auth import logout, login
+from django.contrib.auth import logout
 
 
 logger = logging.getLogger('roster')

@@ -1,6 +1,7 @@
-import datetime, logging, os
+import logging, os
 
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 from BackgroundTask.task_engine.table_maintenance import Maintenance
 from BackgroundTask.models import LastRun
@@ -27,7 +28,7 @@ class BackgroundTask:
         last_record_time = '2000-01-01 00:00:00'
         last_run = LastRun.objects.filter(component=component).values('last_run')
         for last_run in last_run:
-            last_record_time = (datetime.datetime.now() - last_run['last_run']).total_seconds()
+            last_record_time = (timezone.now() - last_run['last_run']).total_seconds()
         return last_record_time
 
     def update_last_run_time(self, component):
@@ -36,7 +37,7 @@ class BackgroundTask:
         """
         logging.info("Updating the time when it was last run: {0}".format(component))
         LastRun.objects.filter(component=component).update(
-            last_run=datetime.datetime.now()
+            last_run=timezone.now()
         )
 
     def run_check_for_table_maintenance(self):
