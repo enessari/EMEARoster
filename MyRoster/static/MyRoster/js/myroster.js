@@ -10,7 +10,7 @@ function load_myroster() {
                 $('#myroster-table').remove();
                 var tableSkeletion = '<div id="myroster-table"><table id="myroster" class="">' +
                     '<tbody>' +
-                    '<td> You are not scheduled for any week this year </td>'
+                    '<td> we don\'t have any upcoming schedule under your name to show here </td>'
                     '</tbody>' +
                     '</table>'
                 $('#myroster-div').append(tableSkeletion);
@@ -20,7 +20,7 @@ function load_myroster() {
                 var tableSkeletion = '<div id="myroster-table"><table id="myroster" class="table table-hover cell-border">' +
                     '<thead class="">' +
                     '<th>ID</th>' +
-                    '<th>Scheduled Dates</th>' +
+                    '<th>Scheduled dates</th>' +
                     '</thead>' +
                     '<tbody>' +
                     '</tbody>' +

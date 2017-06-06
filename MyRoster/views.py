@@ -16,7 +16,7 @@ def myroster_rows(request):
     email = request.user.email
 
     # Current year
-    year_now = datetime.now().year
+    date_now = datetime.now().date()
 
     # Variables
     connected_username = ""
@@ -29,7 +29,7 @@ def myroster_rows(request):
     for user in RosterUser.objects.filter(email=email):
         connected_username = user.first_name + " " + user.last_name
 
-    for audit in RosterAudit.objects.filter(engineer=connected_username).filter(audit_date_field__startswith=year_now).order_by('audit_date_field'):
+    for audit in RosterAudit.objects.filter(engineer=connected_username).filter(audit_date_field__gte=date_now).order_by('audit_date_field'):
         collector.append(audit.audit_date_field)
 
     return JsonResponse(collector, safe=False)
