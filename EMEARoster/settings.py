@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'BackgroundTask.apps.BackgroundtaskConfig',
     'Core.apps.CoreConfig',
     'Scheduler.apps.SchedulerConfig',
+    'MyRoster.apps.MyrosterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -105,6 +106,13 @@ DATABASES = {
         'PORT': os.environ['DB_PORT'],
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators

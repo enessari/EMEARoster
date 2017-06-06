@@ -6,9 +6,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('Core.urls')),
     url(r'^', include('Scheduler.urls')),
+    url(r'^', include('MyRoster.urls')),
     url('', include('social_django.urls', namespace='social')),
 ]
 
 # Change admin site title
-admin.site.site_header = _("EMEA Roster Administration")
-admin.site.site_title = _("EMEA Roster")
+admin.site.site_header = _("Snack Roster Administration")
+admin.site.site_title = _("Snack Roster")

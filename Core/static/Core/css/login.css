@@ -74,7 +74,7 @@ input:focus :-ms-input-placeholder {
 }
 
 .login-forgot-pass {
-  bottom: 40%;
+  bottom: 45%;
   color: white;
   cursor: pointer;
   display: block;
@@ -120,31 +120,13 @@ input:focus :-ms-input-placeholder {
 .underlay-photo {
   -webkit-animation: hue-rotate 6s infinite;
           animation: hue-rotate 6s infinite;
-  background-image: url('../../Core/img/together.jpeg');
+  background-image: url('../../Core/img/snack.jpeg');
   background-size: cover;
-  -webkit-filter: grayscale(30%);
+  -webkit-filter: grayscale(10%);
   z-index: -1;
 }
 
 .underlay-black {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
-}
-
-@-webkit-keyframes hue-rotate {
-  from {
-    -webkit-filter: grayscale(30%) hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: grayscale(30%) hue-rotate(360deg);
-  }
-}
-
-@keyframes hue-rotate {
-  from {
-    -webkit-filter: grayscale(30%) hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: grayscale(30%) hue-rotate(360deg);
-  }
 }

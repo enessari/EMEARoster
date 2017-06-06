@@ -268,3 +268,7 @@ input[aria-controls="roster"] {
     right: 0;
     border-top: 1px solid rgba(40, 62, 74, .4) !important;
 }
+
+.a-pointer {
+    cursor: pointer
+}
