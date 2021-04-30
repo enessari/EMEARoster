@@ -16,7 +16,7 @@ python-social-auth==0.3.3
 pytz==2016.10
 requests==2.13.0
 requests-oauthlib==0.7.0
-rsa==3.4.2
+rsa==4.7
 six==1.10.0
 social-auth-app-django==1.0.0
 social-auth-core==1.0.1
